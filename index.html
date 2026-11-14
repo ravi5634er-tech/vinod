@@ -1,0 +1,408 @@
+<!-- ============================================================
+  VISHAV BOOK — Landing Page (WordPress Custom HTML Element)
+  Paste this entire code into a Custom HTML block / Element.
+  Every button opens the Telegram channel.
+============================================================ -->
+<div class="vb-page">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+
+.vb-page{
+  --vb-logo-image:url("data:image/webp;base64,UklGRnggAABXRUJQVlA4WAoAAAAQAAAAnwAAnwAAQUxQSJYHAAABoEVtmyFJ+uL/Y7y2bdu2bdu2bdu2bXv7rG0bY2/HH/93UT091VWZsbcRMQH4PxyCaIwxqkgIIYhojFFVQgkE0ahofohRQ51JVDSGqRZeb/djz7/hvidefKvj7bdeefr+6886ZMvlZumHxhA11FHQCAAy+yanPvz5EDZ37M+vXrv/ClMAgESpGYkAMNeut3zeyS5zarRxp5TM2eXAV89Zd0oAIUpthAig1wpnv9tJkpYsO5vr2VJykhz45AFzARANdSAKYOnzvyRJS9nZ424pk/zv1YNmARBD1akAUx/QQdJTdrasm5Ec8eAmfQCVKlMBFr1qIMmU2epuRvKLo6cFVKpKBFjlISMtsz3dMjnwojkBDVUUFFjlSZLJ2cY5kSOvmAPQ6lFgkQdJN2ebeyKHnzsVoNUiAVNf+h/dWIWeyN8PiNBQIRHY/TfSWJWeyI6VAa0KEcz3LJmcFepGXjYJYqgEBQ4aTnNWbHZ+vRYgFRAxw+OksYITeV4vxHYLgg3+YHJWcs58Yy7E9hLgJNJY2YkDN4WGNlJMeD9zZoUbeQKCtE3ErO8zsdo989bekDaJWOJXJla9J74wKbQtItYcRmMNdvKjGaBtELHRWBprMfHbOaEtF7F5YmZNJv4yL7TFIjY2z6xN42/zQFsqYo3/PLNGjb/MBm0hxeLDmVmrid9MA2kZwYy/MbNmE98ZEKRFgvR/j8baTXwUGloj4l4m1nAnL0JsiYhj2MlaTtwNsQUUq3nyenIbuzikx0Sm/M0za9r49UQiPRXxMI21nXg7Yg8pdmdijSduD+0RCTMPzbnOch40fZCeUDxGY60bH4b2gGJLGms+cUto04JM+LPnusv+y8QSmqU4k4m1n3gutEkSZh2Vvf48j5krSHMUtzGxAI33QZuiYaGUvQSYfSloU3A/jUVofArSBA0LWWYhZl8G2gTcxlQKxkeaIJh1tHspuKcFoOMTcTYTizHx6vEKmPB35nJwHzIlQvcitqexII0HIHZP8KIXxvsSuiWYu9NZlO5LQrsTcTxTWSRehNidIO/TyiLzu94I4xIsaM7CzFwROq6Io5lKI/E8xHEJXqaVRuZHEsYhmHYEvTScaW5IV4rNaCzOxD0Qu4q4jKlEbod2FfAOrTwyv44IDQHTjKCXh7NzTkiDYg1mFqhxc2hDxBFMJZJ4OmKD4rYyMT4CbQh4h1YimZ8LAhAw0V/0EnEOnapBMLeVCclFIIBidWYWqXEDKBCxM61MEvdBbDiWqVRO7eqScrm6QXFnudwHBQRP0MrE+DSk4ZVyeQ0BCHinXN5pAD5iLpPMDwEE4NNy+RQIAfisXD4DAoCPy+XThoD3yuUjAAh4k1YmxncQAMFz5fJqg+KhcnkKAkTcwFQmifdAG84ql8sRGw4qlxMaFJvRSmXXrpail0nm6lBAMP1Ieok4O+eAAAG9vmUukcyf+yEAEDxLKxHj8xAAiLiQqUQSz0fsagdaiRi36UqwYPYCcdp8kIaAvj8zl0fmj30QGqB4iFYexgeg6DLiEKbySDwIsSvBou7l4b4opKuA3t8wl0bmt70RukLE1Z5KI/k1UIxTsR5zaWRu0J2ACf+gl4Xzr4kQxgXFjZ7KIvktUHRrdeayyFyneyH0/oa5JDJ/6IvQHUScxFQSiWciotuCWUa7l4P7f3NBugfFvUzlkPgYFOO1PHM5ZK4xfhC8SisF83clYLwV6xUEt0IcP4h00MrA/NNeAU1UrFMM3BraDAheopWA8T0VNFWxVC6EtaDNgeIWWv0ZH4eiyRKmG5K97tzGzBOkWVAcwFR3iadD0fSg8iat3jK/6ieheRDMP9a81hJXhqInFYcz1VnixVD0rOI5Wn0ZP+mroYckTP+357pyG7swBD2tWJfJaypxb0T0fMQJ7KynxJsQ0YoR9zDVkbGjj4aWCNKvg1Y/mb/OAEFrCqb9gVY32UcuAUWrKub7h1YvnvP6iGhdxdLDaHXixh0R0coRK41krg837oOI1o5YeRitLtx4ACJaPWLZf5nqwTP3R0TrRyz4E1MdZHI3RLRjxCwfMlWfcczmiGhPxSRP0LziEv9cCRHtKggXk1ZlbnxrNkS0rwTsNoqpuoy8vDcU7RwUi39Cy9XkiYO2BQRtHjHhtWSqIiNfmQsxoO0V2OIX5lw1nth5giCiCoNi6pvI5JVi5JtLIQgqUoH1PiaTV4Y5Bx+uiKjOoOh79EDSvBJyJm+bDRBUqgIzXjaaTN52lsnnVwIiqjZEYL4bxpApt5Obk29sBKiggoMC810xhMzmbZITyec3BIKiokWBmU74hmQyb7mcnBx+2wpAUFS4KNB/i8dGkUzmreOWnOQHR80CBEXFhwhg9kNf7ySZk3nPeU5Gkl9fskIAVFGDQQXAvAc9PYgkPSXL3hzPllImyTEdZ67QG0AU1KXEAGCq9c99bRC7dEspJRtnSimZs8th71yx9awAEDWgViUKAEy54gHXvfbzWDZ11A8vX3vgKtMCQIgaUMNBY0Bjv1mW3/KQs66//6mX33q7460XH7vz8pP33mjJGfqgy6iCGg8aY0DTJUYNKMEgqjFGFQkhBFGNMapIwP9iVlA4ILwYAADQUACdASqgAKAAPl0ijUUjoiEZbH64OAXEtgBlOxosvzq/IebbYX77/bf1/x0tVeYbzx/2PXj/oPUx+l/9P+f/0Ffqr+vfrOftv7of3K9QH7X/sJ7yH+0/bv3N/6b1AP7B/n//b66PsSfu57AH7R+nB+7Hwcf2D/bfur8Cv7F/9f2APQA4Ub/AejfxM/S/2bvMfTf4z8tuXdu69Fv5N+Df2nzGfLPfb8gv771Avxr+Rf4v8xODFm19QX2h+i/7f+6fuv/kOc/xAPy844ugL+Zv+57NX9l/9fuk9sX1F/5/9N8BX8x/rP/C/vP72/5z54/ZX+7ntM/u67KonMvN7LZBhcIY3TezitN8V1nM9hCKQVCXcH+An/U+L6aKt16X/6n3F30Yr2OS2niaMlaproeJ7MpCGMrWYPiGOuq3UndlK7KUtmqlRsrXPErq6N8Ip6r3rhqff6SHUmejSQk1TbVTfQTlBOp146+uEvGLUxpH1hv6CHK8Y3nkCaFp5aRTLkDns7APfnK8KFVZOSHu9h9JtTUj2itGBBz5rl/0VYe/N+UtxC9ZBIpzton+xGwAfSdxr8XnhO1z2Eelv4BI4Ch6jfLS5EArn4Zqtb6Lfzv9uUf8u9PC0FmBoC724dBOuKC76LkKX4I7Jv/bsB5DWLtkT7rxiKvC0lHB/5uFcwL94KNM5ep9J79//7+C+FCfFLpTNduqaNCr/SM9Vqyz8hwfXa5o1YQMzvRffznxBkLA2e/bQ1/mZAewMH08kAqdbxsws/psfP48yrwVbRftrlzV7LikOKttqMTwhISWVnYQytZf/OH10qxYMqb+NTgp9UdC263VX6K5coc7O8Pt7szkyyH5yxdvU8G/QO/mRBAAAP7+0BwJFOoI/6kC8qTBnJ2LFjhJJTfiGK4v23n0un2irvWQl4kOBZ6PC7nVyDL9tcHcICJ3aBzdCOD2NisNDnywTZkY8uHQX+pF9VqteijHJAc84WN7jbqsojYZnytnksm0wYfbO7K/MCwBjZgm3GBBm+zdDIYP0JouwRbSjMe1zj7MK81ztJLa4GVIlUmO5efn7RQmXKiLMYkVZmkIUtToyi+YTzfU+AGesFKmf5Td2daTUoAsn2fZHGKXCFgpSjEUocP3rbTBUupftwqUbkYusfvQaKCUYtoy8TLXUKD/uq+DiwJPQsI6gm1lwlujQSbL1U1wzrH+MOOariS9Sd171wmoHhfM38eNf1tgOReQlSsP12/sb28YYOwTuRKAlFH5dtRTOz7zO3N6zaLGbQpaoGFqTAnsUnEK4LHFh+xP9Jf/cDgP0Z32smviX/rC9+Ja3bI54PlaOLamzXuYADLD/T1nSviaZAH3e0RP7WaL9qHgPbev0RUU3vEAEAgLHFgyMZidjZbZPuvkGjr9/VpUEBMd/jM0iky48C/Ik8fJ5da35k/bRlnjd33OSG9DyCfScNP+pBgXreC3ge5LSQ+veZ/q+abjKvJ3lp6Y57IcNPH2tX5yHjfkqdUnC4lA7oW/6qcxcN1hvKFelfoWd82AdpNjkQXqimfiyymTwQLXXN29XEno0pysL4AmiF6MdOtrYRFym2QlbT6x9oySdDZ73wK6Fh/ZNlF3iOOP2hv8H1K/AKUG2Z4e5wLOgIsGz35pM01d7nO66htFYrwK4lGzUoAYcHYOrc8nCPU/bZCQTM/NPkzfEtGQyEP5JihtJdRiPdTLIJ4Jx00JtBxwSK1vydUcFlYYeO+L1jstIzz+2H86k8kFmt2eNLPGvWdu80Ll1BB6sl4wPyM7bvjLoJflkFEtMF4GFs1uh4rX/gIy7YRvv6E64uGpJl5wQTRVoc3ldCodJRTjpV5eGBM6QegvsxBekh+ec3VKKq+mZ5TPGpQRDZcTUyvYZFFXSm9GfAFdy0dNQmK9k7k52XPsujZ1GGx6mTp3RdH0afrf7PE0xR3pVcTIHpF8gnHS8iYy2F+XXfuNVBgFL4tFVFY1rQmL30pSRhFWO/dC7m2q77hDxN3tDEQHH4sbDyWZiyiGQmVNVPjyKSgOEeHVeRHhY06e8NIC43LH0T8ex5d6agvHYPjLztrbf+fMR1Lt1BCizD5bN9rP1XVRN2Jo/exJIu1iwebLjQjCEd4Uxkg+KzB1g5Tn0rabZdI1f3X3V/ZUr4XkptvNvLiMxIC3sM2QwYesFLGSpbJ8CePVD5WsOipT7jvQsZDbny2WlHzN3jypDmgdA/m1quaiFC3VAQ/g6WLVaEnftxe56K3u4+uZsXTVvMDiSv4OQSpG3o2pZPKUW+tmQdyVKBkT5b4r6jarDdBpcklkhkv/SqFML7pVCKVyr+z7pE44dVgin9dNSIlxoN9WhHCbFhFjCaZO3pjjVrrT8lmoJYYjDt8Y1d7sLys9AZ9T+zZgxRiD985ohFkewuKo303AjUckXUEO2Y3KvTOLFWJjT4xSHB2yUqmJW2jfdssLAGPMbA69EMFbQYrLcUtJ/9Xf+RdqpgjdnEdMLQ+elsnzkw8n7Ym8ZgsJqwjf7aLWExtKo/mfcQbfOb3z/RJ8IyIFPXdMGPzt3D/LLAoMraPVh30OgpB/n120txdnCD2T7u+4C04r3oyBwQYe1wf3buukoyEF7UcIajML0sDDOUq6JTMbdh0/+i2GrV+VRqdBbFqQQAITGv01efzhvrvv7Vn1qDK16vq5FHmmYhMlWZO4GlQr78ypqLQQiL6/aCqHopEYSWPcXJ1N1nb0WtyrVIOTkfPPxO4VGPkQs8EBoV2rWH/ZN2t4XdOu9htJYz56xHHOsWra/ITdh65uhNoBuxJvojWPNuz12FNRRCTcvk03/g9m2sQ9+UgeMIeTiOTcMmXiCJ+N3GVfCsIGprEVKa+fJZEj884wzuAFLADo/3m/WTSZW/ELov8va75LTxl+tQiuszom2ZY4iUPzn0KGKsznbcKeNx0t8F2tczqw/ITrlBtb746eyNasWx2mP/61qefaFEi/CNg/P/O0xsEdyfbUU3vF55kV53Cv0TPo49gY3OZMwBYxVNW36qn2zEPFx8MCvsteVURMHqaJ3E1sS9OVHslJPgEbRgDOJXbno1ogJVrbHStaxPuCryFk1xFptq2X1JLkbP7CNktxJ4SFQLcvj8VsPMCKy8oS3fw/eAJ//wa/jk1LjmM+sCDl5QbTRopaAUMBD4mGS7KdhIYps7LEvJUjrT4jn/7y+OmJIF8RT4nTZzcij6GrhDZmQGZu2aNHmvJwgSWQJNKvhaNzGEU/4E2QOv0PUElbGfs+t+q7JdDjMPtJSK+tnnxSjKw74tmnyZp/6FfUrH0nVdKDlpMjAv7WpeJqz59XUlajbtzlC09u9Iqj/7X4hk35Ff13wA9/jI6SS8Hts4BqYOrvMTXkP6lqK1bc6K+1lHXexyx28lutdP4x26Ocq1Kp4lbraPU8tyHw+20FSwB0jL+gtmrDbJOvmlPncBHIIuf3RQQZO6mLTith6KCfsAPxTwDDb1OLMl/kCqlu8FhLLBl7wPsJ6i+/b2G9ZoWz/tp/dRAjIRKf/Yj6nUU9YJ+YIsclJsyLRdwyR36ZmOwUxKvkqcGopS1gETJG5rQhfDZW2ZQ1JPvOfICnbojPtXm6o7x1Fov3qbwfofM+x1NC1mqTlcnugGK8pJj9id9MZ3+0aQjfVsEweXlXtNM8K9dFvXtjBuoyiPxd7XFt8AmGFxFEA+zEyDjqsR8FS0kqwAGU7RwCIi4ag9zb+R2XpeRldvIJTh57sYq/YFTlKZfnNOIb3/M8H4rXOUie3xLsKB1+5PE3B5K1OSI/4DtAOT2NRYzs1zfnyrW9YFEEJKAP6WUs3iDqaQp5+xOfjg4rzRHlfJh+Y3637t7Te77gKztrbYUUwdDWC5GPsDXAzJ6K57j1wiImwbD0Rf1gGadhPBvKQ+tcQBgbvIOlBPN3xXILnLWVT67O/M1jEmjPe+r6BRzL8zTGsAjNiohl6EI0WpiS0wK5MJCoGiisePWOwxDTKMtQhzVFYkgol6QuaBBHyZbzuJ7aygGzoAs/g6/NAAKY1aoZR878kaL1oFG4wYznJCgD4c+MjTzSo54iywF6OupB+b9NpDkEmrIUQ4AbLooGrtPMrqEq+Ye4h4R0QuxrZkQ4h/FCrjp1JMwZv9oD9zcxQwEDit+nnNWapouq6R+c2/ztm1v3wq+JaZ1wJ49XppMDWpdE080o7FLo0Js4VBBHgvN/n5fmjqCP7H78BWvqEvGzCQapN+RO88Ghq2sWkHRTVB2BrHYpypDLZvgTAHLQ0+E9kPkljvSYZhbqmX/CoxtbTjzB2dH91OcjS79VEZk+156nmibZU4nigTgqtr3g3nAssOm1CVPOlhZ97/sXu5IjHw9ACi20Bv5FnuTMf6rUt5wen/Cn9UlLpwCRX6Sm0EcxwidAALKaMaqACCOsT4IsfRnyXj4hRHcjspBLUksgNWM21KFJSxkK3HzEh++K51Ii8aui2XraGbc8J32MFiFa+eRBQx82pbtmcIsNd5YkcZ4EzySwOsJT4vqfa4T30YlatE5pIDstAi144K4X7RqKNLp7ZmYrKEIJ14cKVTajsloJM8l8oFWjnxpSYpUlOtN1vVoCGxT70azM+hSFSQLp6BDS83cIpqmobzUmlrDbblv43GZT2ZP6wXObUbK2keTxXBRzAvCsPXKJsr04716RqrHhbICU5QvNY3oDRK+6gnKBMMEqVp1uT/Q2rE9hD2253tfUG/cKkJxZZtGJ2FES9KZiQQ+gOkkMGzY9SEuG4gc/MQkgBEPGTz2rdZk40ZbZg32R2Epb7YTQAz8vsU3nZ5IOX0h8s4KS0Dk6XdVZdwbbDPmbUDYDWM69RHkytLivkwftjSUhNu4nROCEiW5UNzhpy2DEWKbCK+UGQuUPILIQLRpsrUhVhLGpR5uixsQDiOVhFKTOs6fU/03lPs59ytv/hCPunZYw0QaNULkNeY+DH2F+r3yF4Bclh7XLktqoPuIzTleRO0DMfalUztx7ZNJZ5OYIpl7kKj4N2gRBjOzsAOMFUSJmcMDguSGPDuG83haK+b9cXYNfdLocNzweKC5iSjYXk472/sDcmvzoJKBA18q9sM9uMyWEXCdnkZ/Zh8s9TK9z8VWNAjbhOeFmvtbkXr9ZeVwxo1Qjii9I8AswuozMNSpVs/lHlA/S9XyDRw9frQJHj1cWYYALTTP47E7ePyXGMhCr1+wax5VEACPAsbOah5rmDqoKrQFo+LzPvDHMAWGuXb3lI1RV+zPOcRBkXVk60QW0+U37lOd6nq02Bk2c5gyJ5uw3XH5xTThxPCbLFhvjqSbh/saW80qL6wEOxEpDAAAKKRi55JK/b6d8w9MaoYsFJ2Ail4VDA4+VOF8nhnoCqPbO9NGApKl6n80mQNjM5GJ6tS4X+IvYY0w82UYGZB3ftOD5BPXzMD0v+bCpuewdnCqLCSpd21AAfFSyhdfrIC182UZRRm1JUUIR/Nqh2NmALSD7G1b7uNfU4c7dYFa9SQ6NdQSG6WgoxiHYokQy7ic96FVOYE+N8NdI6ulRlKLoHq97jDbak0J1yTpGtNae/hdTrPm49Hw/NmR/CA6D87zHYLfMCqHQGCtNh/43LZK7YnJPf/1eRsXDHQDAHD9/hVTmKX/CbyVH62PhuawY+KfVBaK4YfQsjsPQ1JSfEJJWp9VGctc3yrIKwTjeFV9ODcPi4GCRtIo5O1i/OonRh5TAHU1gLGOifL7FOQAgLaF2vNTM4zY2KGL0DIVZLZqY05IGGhtEibeiuwx/9Kblk+7TRGlLT3ocpYkcE1Y5NCQz0+yYpiT+B3Z1FcwwK1U9Ew+i5d0/czdqRn2xSnokwfAPJT7rl/MLa8aMWxzkzBLwsXw3dovbKSmkfYaRtiJoZJxKLz0vxUql1JNHu+IFSfgbWvKVHxE957VigdWDozmNYn/EZn9fMC4iuBb4/jLULzMTqOPl1Dld/HYoJbX2a3Ua4ArFvDBghwPeZ9isUXFYbQitC2nCAuk3b3gfvNeQcbbLm9h3aUSWv4R7CzA6pnnm/aq9oZg6U1UEllTxa9FYwDf47czibvvpgCNL3coBB8KvtnZVmJIxo6f+wurP79kntjw51GT2p9MvEXsDEyoXTDlEGb08iVb51Mycejn2wD+BDeBxgj4WsDWm5pwll2ldXTQhm25dR47wz+l+v4ouvP8sjk821HaKCghfjAl4UkPPD51s+03OMOtoq0r/lvg50DMgT8XzE+B8fo8SLzmXcZoK0D6ZXn611h5DFmtUECx1xdg3FJcKu/52l0TVlD+rmJMYDCQw0Q4fmfalgcLrCtOQvqL8vajzNl0pDJ2lgOIEYzB4ogqkckC5wRSM8RNNOlW7SArEXqiQASz5rfvvfJudn8dz8FDVvKpR09SicI/vbO0bmBfBGP05mEx47vwwZbXeo8gpLk0cAOnnrOEi2zGW6kgbB9bHRghd/fZmweLc2zjttsdz0zqLV+sjf+IMxnrXr1RMt8qquhRFLdyxz50xto7EgG5tLVha9eD4+K86XhvXS6bx77J9XRBGP9Ox6Q+p0H24Epllg8g/yPXe8d0REX6VC5n1vLUhIWMlPJqmx59eSvzL+GnWDtZd9BsCVQXJvZfzI4zqtmG9KSnXKk3w+e4IeMVE1ZO/SE3tq9MdRiAzPqFl0gZRBOtsne+ce0p4BTksBXSRFTcwGI/WPPAVuQWarbZTa7/vTBeraqo6yr2Uy7GoJS/kUXjd+lLh2+FnvCntCkyu+PSLNpmNO7htSS07dJXDrtLafd0ENEIRZN5SyUaWIFZbq9ySKrRZj4B43ZibarYJ7EWdvy2+IZjE10zY8QWcdDHIs2X7RbXrsqPHQssCvauD4xefPE7WU+LtLq27sn56upbxkm1bihcrJ1C64D0jSI68dYjDU2EBgkbwlffiFvdyPAIVstubapkT+CKziSsglb0gBn0no0U2CBPmGzOctR7jGYfZWMnsQeGHkWETyTj8HqB67cazEYSdxa7NHNDOR/k6J8SNaXFNfVFSfhh4oX68Gu60jm2g4MJPYrkZ704MTYQ6lJuYn48RCED4X5ImbuUBae/XOrJVsHid8T7g1vQc/NMR9xkU3nXWnkFBfGq6zD19G9wq9WBNUazPId5rgy68qKXgmrTuO6Mb88iTFAnjtOti9EUWF8W7T8HP8G3+CZy1HFWzoD65znumYmigLaIgJfhqIlMxf60PAjUcN4LnoS23qguaA/vksBuk2Hb4cRLs7Xs29ewoVpTYi3F4pgbB4bVplX3nMwxO1TQsZznGWQrvWeeMoSv2FebGnFvf+YjqXK/C6PuNv8U5UuBS0SKXi0BgDUyVk8FKS0G167GjWHfF0Asha0oIhBGncR48K9INZpL9EG1bAuWU0bWo0hBv9WY91zQj0rDIimZw9UrgLo15e60gNCqhN4aKJ7nIySTVswqd6X6U7w/7DfLtfsiMmyxIqcGyFParX2sZlMB4jJYrmcLhZM/orG+L497dHbgJzAKLAfq/o3TKue/EVnLejG0VQ18KEDKDd/faPBV0prwP/D1eEp5ubZz4aQ3Hvbbhf0nF0TTvgmjawQIPWNCHPNdwlPssTxCnKZorH1sVgFK3yK+sussE4mR37//SRMURxO6rrgLQcCfozOzo2pzKj/u9MEXXiTmfDIEQ/IKH8Z0ZAOYUHo+k00NfpdGhaPOjEMggv64g7djRbLf67jv6wRQf0yiVehOMneKlSsWelQV3jhHajK9at7ihYXbCE2prFtK2nmhXCSL983xoGwKR0eSEpttrwN6+r0qJiuPYFsx70mAyK6qFX3WwsRJT684/iezPnV8OsO6c/4rClHUlBzcGWyidHhoePzLaugeMmEaZQUSSq4nQzuA1PrViVbsz96YSENO7xybpuMOBqELygQRSkCM6jlXl/junZoKJZNvMttpB9lrdG6TpJKFxNh1FxBP3MhtG+azc62jCb/Vo/KJEQ7c0GXzGz4auhaH34QAAAHKrxFBc1RTmrDCfPc5GxbFOhsbPNA4r8Vh3M/Pw9/e3m5RqrMnaPnZ4I5Z/cXokKh981TsLUIcCbQyIaurI4bThp7DP+OWOyUOpyXEYbZnB5iVsdLdEmZgZLDe8l0a/VsDxB4Ym59Nnl1Oo/eJOPc5nzdcnDygu7ScrIgS7GNc4oW7YTqt+Iv/mKY3mz09T1gd2fkI/Fw+ykxu98zFtiMdLUP4x2R02RZ6NmDv5Dm5KdDCkTMSHHagR1MkWMEvCtHOLwmm4reN9CVBMvMrDRXnsKzgsUj8VLGldTAzgFTFoE1MkD85sj4G2i4lKANiTV9hhvdzV68IHsMZQukMmLkTxMHIO0mkI2lDf/MIYgUnlDL8ulioDFu6d6+PEb10WpwIC1TUkSOojfPGMb0PcbCGm3MYoDMClAdMUZqhbSYsEkyUchadWS/t9i2zAAAAAAA==");
+  --vb-primary:oklch(0.64 0.22 28);
+  --vb-primary-deep:oklch(0.52 0.2 28);
+  --vb-accent:oklch(0.71 0.13 190);
+  --vb-ink:oklch(0.24 0.03 30);
+  --vb-muted:oklch(0.48 0.02 30);
+  --vb-cream:oklch(0.985 0.012 60);
+  --vb-card:oklch(1 0 0 / 0.72);
+  --vb-ring:oklch(0.64 0.22 28 / 0.18);
+  --vb-gradient:linear-gradient(120deg,oklch(0.64 0.22 28),oklch(0.68 0.18 45) 45%,oklch(0.71 0.13 190));
+  --vb-warm:linear-gradient(160deg,oklch(0.97 0.04 50),oklch(0.95 0.05 25));
+  --vb-mint:linear-gradient(160deg,oklch(0.96 0.04 190),oklch(0.98 0.03 120));
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--vb-ink);
+  background:
+    radial-gradient(900px 500px at 85% -5%,oklch(0.95 0.05 190 / 0.55),transparent 60%),
+    radial-gradient(900px 520px at 0% 12%,oklch(0.95 0.06 30 / 0.5),transparent 55%),
+    var(--vb-cream);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.vb-page *{box-sizing:border-box;margin:0;padding:0}
+.vb-page img{max-width:100%;display:block}
+.vb-page a{text-decoration:none;color:inherit}
+.vb-wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* ---------- blobs ---------- */
+.vb-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;z-index:0}
+.vb-blob-1{width:420px;height:420px;background:oklch(0.8 0.12 40);top:-120px;left:-120px;animation:vb-float 14s ease-in-out infinite}
+.vb-blob-2{width:360px;height:360px;background:oklch(0.82 0.1 190);top:22%;right:-140px;animation:vb-float 18s ease-in-out infinite reverse}
+.vb-blob-3{width:300px;height:300px;background:oklch(0.85 0.09 90);bottom:-100px;left:30%;animation:vb-float 16s ease-in-out infinite 2s}
+@keyframes vb-float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.06)}66%{transform:translate(-30px,25px) scale(0.95)}}
+
+/* ---------- header ---------- */
+.vb-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:oklch(1 0 0 / 0.65);border-bottom:1px solid oklch(0.9 0.02 40 / 0.6)}
+.vb-header .vb-wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.vb-brand{display:flex;align-items:center;gap:12px}
+.vb-logo{display:block;width:52px;height:52px;flex:none;border-radius:50%;background:var(--vb-logo-image) center/contain no-repeat #fff;box-shadow:0 4px 16px oklch(0.64 0.22 28 / 0.25);animation:vb-pulse 3.5s ease-in-out infinite}
+@keyframes vb-pulse{0%,100%{transform:scale(1);box-shadow:0 4px 16px oklch(0.64 0.22 28 / 0.25)}50%{transform:scale(1.06);box-shadow:0 8px 26px oklch(0.64 0.22 28 / 0.4)}}
+.vb-brand-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.18rem;color:var(--vb-primary-deep)}
+.vb-brand-name span{color:var(--vb-primary)}
+.vb-btn{display:inline-flex;align-items:center;gap:9px;background:var(--vb-gradient);color:#fff;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:999px;box-shadow:0 8px 22px oklch(0.64 0.22 28 / 0.35);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.vb-btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px oklch(0.64 0.22 28 / 0.45)}
+.vb-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,oklch(1 0 0 / 0.45) 50%,transparent 70%);transform:translateX(-120%);animation:vb-shimmer 3s ease-in-out infinite}
+@keyframes vb-shimmer{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.vb-btn-ghost{background:oklch(1 0 0 / 0.7);color:var(--vb-primary-deep);border:1.5px solid var(--vb-ring);box-shadow:0 4px 14px oklch(0.64 0.22 28 / 0.12)}
+@media(max-width:560px){.vb-btn span.vb-btn-label{display:none}}
+
+/* ---------- hero ---------- */
+.vb-hero{position:relative;padding:84px 0 70px;text-align:center;overflow:hidden}
+.vb-badge{display:inline-flex;align-items:center;gap:8px;background:oklch(1 0 0 / 0.75);border:1px solid var(--vb-ring);color:var(--vb-primary-deep);font-weight:700;font-size:.82rem;letter-spacing:.4px;padding:8px 16px;border-radius:999px;margin-bottom:24px;animation:vb-drop .8s ease both}
+@keyframes vb-drop{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+.vb-dot{width:8px;height:8px;border-radius:50%;background:oklch(0.72 0.17 145);animation:vb-blink 1.6s infinite}
+@keyframes vb-blink{0%,100%{opacity:1}50%{opacity:.25}}
+.vb-hero h1{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.14;letter-spacing:-1px;animation:vb-rise .9s .1s ease both}
+.vb-grad-text{background:var(--vb-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:vb-grad 5s linear infinite}
+@keyframes vb-grad{to{background-position:200% center}}
+.vb-hero p{max-width:620px;margin:20px auto 30px;color:var(--vb-muted);font-size:1.08rem;animation:vb-rise .9s .25s ease both}
+.vb-hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:vb-rise .9s .4s ease both}
+@keyframes vb-rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.vb-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:860px;margin:52px auto 0}
+.vb-stat{background:var(--vb-card);backdrop-filter:blur(10px);border:1px solid oklch(1 0 0 / 0.8);border-radius:18px;padding:18px 10px;box-shadow:0 8px 24px oklch(0.64 0.22 28 / 0.08);transition:transform .3s}
+.vb-stat:hover{transform:translateY(-6px)}
+.vb-stat b{display:block;font-family:'Sora',sans-serif;font-size:1.5rem;color:var(--vb-primary)}
+.vb-stat span{font-size:.8rem;color:var(--vb-muted);font-weight:600}
+@media(max-width:640px){.vb-stats{grid-template-columns:repeat(2,1fr)}.vb-hero{padding:56px 0 50px}}
+
+/* ---------- marquee ---------- */
+.vb-marquee{overflow:hidden;background:var(--vb-gradient);padding:13px 0;white-space:nowrap}
+.vb-marquee-track{display:inline-block;animation:vb-scroll 26s linear infinite}
+.vb-marquee span{color:#fff;font-weight:700;font-size:.92rem;letter-spacing:1px;margin:0 26px;text-transform:uppercase}
+@keyframes vb-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.vb-section{padding:78px 0;position:relative}
+.vb-kicker{display:block;text-align:center;color:var(--vb-primary);font-weight:800;font-size:.8rem;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.vb-title{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.6vw,2.4rem);text-align:center;line-height:1.2;margin-bottom:14px}
+.vb-sub{text-align:center;color:var(--vb-muted);max-width:560px;margin:0 auto 46px}
+
+/* reveal on scroll */
+.vb-reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.vb-reveal.vb-in{opacity:1;transform:translateY(0)}
+
+/* features */
+.vb-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vb-feature{background:var(--vb-card);backdrop-filter:blur(10px);border:1px solid oklch(1 0 0 / 0.85);border-radius:20px;padding:28px 24px;box-shadow:0 10px 28px oklch(0.64 0.22 28 / 0.07);transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.vb-feature:hover{transform:translateY(-8px);box-shadow:0 18px 40px oklch(0.64 0.22 28 / 0.16)}
+.vb-feature::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--vb-gradient);opacity:0;transition:opacity .35s}
+.vb-feature:hover::before{opacity:1}
+.vb-f-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:var(--vb-warm);margin-bottom:16px}
+.vb-feature h3{font-family:'Sora',sans-serif;font-size:1.06rem;margin-bottom:8px}
+.vb-feature p{color:var(--vb-muted);font-size:.92rem}
+@media(max-width:900px){.vb-features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.vb-features{grid-template-columns:1fr}}
+
+/* steps */
+.vb-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:vb-step}
+.vb-step{background:var(--vb-mint);border-radius:20px;padding:30px 24px;text-align:center;border:1px solid oklch(0.9 0.04 190);transition:transform .35s}
+.vb-step:hover{transform:translateY(-6px) scale(1.02)}
+.vb-step::before{counter-increment:vb-step;content:"0" counter(vb-step);display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--vb-gradient);color:#fff;font-family:'Sora',sans-serif;font-weight:800;margin-bottom:14px}
+.vb-step h3{font-family:'Sora',sans-serif;font-size:1.05rem;margin-bottom:8px}
+.vb-step p{color:var(--vb-muted);font-size:.9rem}
+@media(max-width:800px){.vb-steps{grid-template-columns:1fr}}
+
+/* pricing */
+.vb-pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.vb-plan{background:var(--vb-card);backdrop-filter:blur(10px);border:1.5px solid oklch(0.92 0.02 40);border-radius:24px;padding:32px 26px;display:flex;flex-direction:column;box-shadow:0 12px 32px oklch(0.64 0.22 28 / 0.08);transition:transform .35s,box-shadow .35s;position:relative}
+.vb-plan:hover{transform:translateY(-8px);box-shadow:0 20px 46px oklch(0.64 0.22 28 / 0.18)}
+.vb-plan-pop{border-color:var(--vb-primary);background:linear-gradient(170deg,oklch(1 0 0 / 0.85),oklch(0.97 0.04 30 / 0.85));transform:scale(1.03)}
+.vb-plan-pop:hover{transform:scale(1.03) translateY(-8px)}
+.vb-pop-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--vb-gradient);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:1.2px;padding:7px 18px;border-radius:999px;box-shadow:0 6px 16px oklch(0.64 0.22 28 / 0.4)}
+.vb-plan-num{font-size:.78rem;font-weight:800;letter-spacing:2px;color:var(--vb-accent);text-transform:uppercase;margin-bottom:6px}
+.vb-plan h3{font-family:'Sora',sans-serif;font-size:1.15rem;margin-bottom:14px}
+.vb-price{font-family:'Sora',sans-serif;font-weight:800;font-size:2.3rem;color:var(--vb-primary-deep)}
+.vb-price small{font-size:.85rem;font-weight:600;color:var(--vb-muted)}
+.vb-plan ul{list-style:none;margin:20px 0 26px;flex:1}
+.vb-plan li{padding:8px 0;font-size:.93rem;color:var(--vb-muted);display:flex;gap:10px;align-items:flex-start}
+.vb-plan li::before{content:"✓";color:var(--vb-primary);font-weight:800;flex-shrink:0}
+.vb-plan .vb-btn{justify-content:center}
+@media(max-width:900px){.vb-pricing{grid-template-columns:1fr;max-width:440px;margin:0 auto}.vb-plan-pop{transform:none}.vb-plan-pop:hover{transform:translateY(-8px)}}
+
+/* testimonials */
+.vb-testi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vb-t-card{background:var(--vb-card);backdrop-filter:blur(10px);border:1px solid oklch(1 0 0 / 0.85);border-radius:20px;padding:26px 22px;box-shadow:0 10px 26px oklch(0.64 0.22 28 / 0.07);transition:transform .35s}
+.vb-t-card:hover{transform:translateY(-6px)}
+.vb-t-stars{color:oklch(0.78 0.15 85);letter-spacing:2px;margin-bottom:12px}
+.vb-t-card p{font-size:.93rem;color:var(--vb-muted);margin-bottom:16px;font-style:italic}
+.vb-t-who{display:flex;align-items:center;gap:12px}
+.vb-t-who img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--vb-ring)}
+.vb-t-who b{display:block;font-size:.9rem}
+.vb-t-who span{font-size:.78rem;color:var(--vb-muted)}
+@media(max-width:900px){.vb-testi{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.vb-testi{grid-template-columns:1fr}}
+
+/* cta */
+.vb-cta{background:var(--vb-warm);border-radius:30px;padding:64px 30px;text-align:center;position:relative;overflow:hidden;border:1px solid oklch(0.92 0.04 40)}
+.vb-cta h2{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.5rem);margin-bottom:14px}
+.vb-cta p{color:var(--vb-muted);max-width:520px;margin:0 auto 28px}
+.vb-cta .vb-btn{font-size:1.05rem;padding:16px 34px}
+
+/* footer */
+.vb-footer{background:oklch(0.24 0.03 30);color:oklch(0.9 0.01 40);padding:44px 0 26px;margin-top:0}
+.vb-footer .vb-wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.vb-footer-brand{display:flex;align-items:center;gap:12px}
+.vb-footer-brand .vb-logo-small{display:block;width:40px;height:40px;flex:none;border-radius:50%;background:var(--vb-logo-image) center/contain no-repeat #fff}
+.vb-footer-brand b{font-family:'Sora',sans-serif;font-size:1rem}
+.vb-footer small{color:oklch(0.72 0.01 40);font-size:.8rem}
+.vb-footer-links{display:flex;gap:18px;font-size:.85rem}
+.vb-footer-links a:hover{color:oklch(0.8 0.1 40)}
+@media(max-width:600px){.vb-footer .vb-wrap{flex-direction:column;text-align:center}}
+
+/* ---------- 3D push buttons ---------- */
+.vb-page .vb-btn{
+  transform-style:preserve-3d;
+  box-shadow:0 5px 0 oklch(0.45 0.18 28),0 14px 26px oklch(0.64 0.22 28 / 0.35);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.vb-page .vb-btn:hover{
+  transform:translateY(-3px) rotateX(8deg) scale(1.02);
+  box-shadow:0 8px 0 oklch(0.45 0.18 28),0 20px 34px oklch(0.64 0.22 28 / 0.45);
+}
+.vb-page .vb-btn:active{
+  transform:translateY(3px) scale(.97);
+  box-shadow:0 2px 0 oklch(0.45 0.18 28),0 6px 14px oklch(0.64 0.22 28 / 0.3);
+}
+.vb-page .vb-btn-ghost{
+  box-shadow:0 5px 0 oklch(0.87 0.04 30),0 12px 24px oklch(0.64 0.22 28 / 0.12);
+}
+.vb-page .vb-btn-ghost:hover{
+  box-shadow:0 8px 0 oklch(0.87 0.04 30),0 18px 30px oklch(0.64 0.22 28 / 0.2);
+}
+.vb-page .vb-btn-ghost:active{
+  box-shadow:0 2px 0 oklch(0.87 0.04 30),0 5px 12px oklch(0.64 0.22 28 / 0.12);
+}
+@media(prefers-reduced-motion:reduce){
+  .vb-page *, .vb-page *::before, .vb-page *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+  .vb-page .vb-reveal{opacity:1;transform:none}
+}
+</style>
+
+<!-- ================= HEADER ================= -->
+<header class="vb-header">
+  <div class="vb-wrap">
+    <div class="vb-brand">
+      <span class="vb-logo" role="img" aria-label="Vishav Book logo"></span>
+      <div class="vb-brand-name">Vishav <span>Book</span></div>
+    </div>
+    <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">
+      ✈ <span class="vb-btn-label">Join Telegram</span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="vb-hero">
+  <div class="vb-blob vb-blob-1"></div>
+  <div class="vb-blob vb-blob-2"></div>
+  <div class="vb-blob vb-blob-3"></div>
+  <div class="vb-wrap" style="position:relative;z-index:1">
+    <span class="vb-badge"><span class="vb-dot"></span> Govt. of India Verified Platform</span>
+    <h1>Handwriting Homework Books <span class="vb-grad-text">Work From Home</span> Jobs</h1>
+    <p>Write homework content in your own handwriting and earn from home. Daily payment cycle, free doorstep delivery of pages, and a refundable security deposit. Trusted across India.</p>
+    <div class="vb-hero-cta">
+      <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">✈ Apply on Telegram</a>
+      <a class="vb-btn vb-btn-ghost" href="#vb-pricing">View Plans & Pay</a>
+    </div>
+    <div class="vb-stats">
+      <div class="vb-stat"><b>50K+</b><span>Writers Joined</span></div>
+      <div class="vb-stat"><b>24 Hrs</b><span>Payment Cycle</span></div>
+      <div class="vb-stat"><b>100%</b><span>Doorstep Delivery</span></div>
+      <div class="vb-stat"><b>₹0</b><span>Hidden Charges</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="vb-marquee">
+  <div class="vb-marquee-track">
+    <span>✦ Work From Home</span><span>✦ Daily Payments</span><span>✦ Free Page Delivery</span><span>✦ Refundable Deposit</span><span>✦ No Typing — Only Handwriting</span><span>✦ All India Service</span>
+    <span>✦ Work From Home</span><span>✦ Daily Payments</span><span>✦ Free Page Delivery</span><span>✦ Refundable Deposit</span><span>✦ No Typing — Only Handwriting</span><span>✦ All India Service</span>
+  </div>
+</div>
+
+<!-- ================= FEATURES ================= -->
+<section class="vb-section">
+  <div class="vb-wrap">
+    <span class="vb-kicker">Why Vishav Book</span>
+    <h2 class="vb-title">Everything You Need to <span class="vb-grad-text">Start Earning</span></h2>
+    <p class="vb-sub">A simple, transparent system — choose a plan, receive pages, write and submit, get paid.</p>
+    <div class="vb-features">
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">✍️</div><h3>Handwriting Work</h3><p>Write homework content in neat handwriting — no typing skills, no software, no experience required.</p></div>
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">🏠</div><h3>100% Work From Home</h3><p>Everything happens from your home. Pages arrive at your doorstep and finished work is picked up.</p></div>
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">💰</div><h3>24-Hour Payment Cycle</h3><p>Payments are processed on a daily cycle — 50% advance within 30 minutes of plan confirmation.</p></div>
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">📦</div><h3>Free Doorstep Delivery</h3><p>Blank pages and materials are delivered free anywhere in India. No shipping cost to you.</p></div>
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">🛡️</div><h3>Refundable Deposit</h3><p>Your security deposit is fully refundable on plan completion — transparent and risk-free.</p></div>
+      <div class="vb-feature vb-reveal"><div class="vb-f-icon">🇮🇳</div><h3>Govt. of India Verified</h3><p>A verified Indian platform with thousands of active writers and a responsive support team.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STEPS ================= -->
+<section class="vb-section" style="background:oklch(0.97 0.02 190 / 0.5)">
+  <div class="vb-wrap">
+    <span class="vb-kicker">How It Works</span>
+    <h2 class="vb-title">Start in 3 Simple Steps</h2>
+    <p class="vb-sub">From joining to your first payment — the whole process is designed to be effortless.</p>
+    <div class="vb-steps">
+      <div class="vb-step vb-reveal"><h3>Choose a Plan</h3><p>Select the plan that fits you and confirm on Telegram. Pay the refundable deposit to activate.</p></div>
+      <div class="vb-step vb-reveal"><h3>Receive & Write</h3><p>We deliver blank pages to your doorstep. Write the homework content neatly at your own pace.</p></div>
+      <div class="vb-step vb-reveal"><h3>Submit & Get Paid</h3><p>Send completed pages back. Quality is checked and your payment is released on the daily cycle.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="vb-section" id="vb-pricing">
+  <div class="vb-wrap">
+    <span class="vb-kicker">Plans & Pricing</span>
+    <h2 class="vb-title">Pick Your <span class="vb-grad-text">Earning Plan</span></h2>
+    <p class="vb-sub">50% advance is payable within 30 minutes of confirming your plan. Deposits are refundable.</p>
+    <div class="vb-pricing">
+      <div class="vb-plan vb-reveal">
+        <div class="vb-plan-num">Plan 01</div>
+        <h3>Starter</h3>
+        <div class="vb-price">₹23,500</div>
+        <ul>
+          <li>50 pages of handwriting work</li>
+          <li>7-day completion window</li>
+          <li>₹550 refundable deposit</li>
+          <li>Free doorstep page delivery</li>
+          <li>Telegram support</li>
+        </ul>
+        <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">Join Plan 01</a>
+      </div>
+      <div class="vb-plan vb-plan-pop vb-reveal">
+        <div class="vb-pop-tag">MOST POPULAR</div>
+        <div class="vb-plan-num">Plan 02</div>
+        <h3>Standard</h3>
+        <div class="vb-price">₹28,000</div>
+        <ul>
+          <li>80 pages of handwriting work</li>
+          <li>15-day completion window</li>
+          <li>₹750 refundable deposit</li>
+          <li>Free doorstep page delivery</li>
+          <li>Priority Telegram support</li>
+        </ul>
+        <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">Join Plan 02</a>
+      </div>
+      <div class="vb-plan vb-reveal">
+        <div class="vb-plan-num">Plan 03</div>
+        <h3>Premium</h3>
+        <div class="vb-price">₹45,000</div>
+        <ul>
+          <li>120 pages of handwriting work</li>
+          <li>30-day completion window</li>
+          <li>₹1,250 refundable deposit</li>
+          <li>Free doorstep page delivery</li>
+          <li>Dedicated support manager</li>
+        </ul>
+        <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">Join Plan 03</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="vb-section" style="background:oklch(0.97 0.03 50 / 0.5)">
+  <div class="vb-wrap">
+    <span class="vb-kicker">Testimonials</span>
+    <h2 class="vb-title">What Our Writers Say</h2>
+    <p class="vb-sub">Real feedback from writers working with Vishav Book across India.</p>
+    <div class="vb-testi">
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"मैंने Plan 01 लिया और 7 दिन में काम पूरा हुआ। पेज घर पर आए और पैसे समय पर मिले।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,UklGRrwDAABXRUJQVlA4ILADAAAwFACdASpgAGAAPrlOoksnJCMirxD8MOAXCWMAxfx2COxEyzmV00rmBCNQjJ0EvYmiQC/5xSQnlL0Ru8+obDNg6Vy8KT/cYzQaHrM0PZpCG5g1CwcUCWUdLUQdcdYqM+na4W5KfHfngToK6Ng+fQTqnQ+9N2FeteFswY0mmCSFHgFlYv2mRC1E7UNDLMJM5f+eLyF56NMGWteHaKtgPF6TqTsUJQuIt7jywAD+9XzNb7+gNXpgP2NHjmTTZ7VoGrbTXQ4XZ3ucVQx6mVtOcR0r486vP8i+zvVCpMkTiEM5RXN1gi0Bul4/i5+HZ19qWW7aEd4YKWlY2OukpcUhCRZzZUxJ9pwoUonkr1xdw1upKQbDZPdamRs8uYf9DY5vhBPf0PVYGglWRXQCZAC/wA46EQyCMNLo/6V/HdT1NpeAAA4oYyWUI56zXDgxq1eupKTU+FaQmLAL2IfQmNf/hbpU5DvzmmfJ3Fdvl/D8U3DiAYeb5R2nz7kbNC0oAoRA3tuBpVb5I0o3Wd4LZCCnfqnzcC1LvfyAQqacOrAJ/9u/1yLiLKi5Kt01Ycil1nclxdE2SGoqldhm+7538Igoa+HrfcZtP9QWOp4DZBQVQSbU8u0vZtcOB5Bp1igwoWw8S75f3VK7zoboWus/hxSdgkhdFDfWpCDS/G4qqe5PvSRXnhLOK6Ix5INdkN8i81AvuVvE7I3j00FoCPHAfu79UKAwomI9zblLJFCXQ3iA7Bda28K/z4vFzscRfEQ/cQ1ZrwDVoUF3NkEUYDzV6OCXcXyMCav4U7dCOKyItCYOJt4etw3NCnv/w9+bE5ZCbXCzq7aGrnMsRs6SPIiXq8rCrEkBckrVbEZE9OSNVS1Dz5p2XD+T25mwFNecfVjqVAva2LU7OQQpbphvtROhVzCglkZe63zNOyyuaIC87RsuXyOwMF4UMm3pT0WZH/ne39+kvX8oRnWQ0QleMF3MzdephQjR8BktoN9BwxmO425qXv3DTNQ/bgejjvIhD1BO6EgZZ5VYLLhE/WCVBZoyuze9eso/gzP+mHHQ1hacCdm7JjVBCs1OjkbNzDSo1Qtgy1Ukoy7d3LM0o2NV1L4ftbIjGfh8aToXfbF1SkCFj6vFUcWimUao/mhTc2Rm9QCBD28VkRrIj8JuhutnP/0BciMyEkz//fXcg+zbknbTc8lAgmx/8ypF0oeTb0s2fmqaBkBP6vtEV9PYAvM3VUWM0WSo69c5nGwLVOOLKWzdDXVqdsAAAA==" alt=""><div><b>Priya Sharma</b><span>Jaipur, Rajasthan</span></div></div>
+      </div>
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"घर बैठे कमाई का एक बेहतरीन तरीका। सपोर्ट टीम टेलीग्राम पर तुरंत जवाब देती है।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,UklGRgYFAABXRUJQVlA4IPoEAAAQHACdASpgAGAAPrFGnkonI6Mhs5aNsOAWCUAX5geg88Z6Y3TzY5N+NgTws+JKdhM4rjma6X+4/SxPzV1SrNo2LLup1lDm0zCzRUDVRbhaw6KczH02wFGrGuemK7O0aTlpepeip0cxBVsao9KpQDx/hQ5RYFzkxliI4s91UO1a0bGB5Zinf96+Kvec/JZko4AaXZhN0Q7uGh4W+rr+CzGE7R3SycCX/1Qg4NoTu/wCurL3R93cv1NnClfri66teaSrm4z7KEr+kGrorg5KKSYeCiNVoiL8e7Isdm8gfbOvblZ8xDVHDEPSQAD+6rr/wmdVmmi8x4S/URBVyG/2+igEdlq3/BpFpQnqxNSJBU/fLKT+TuOPBN9TiqofHhjdwaSWUP21G7d9VirA6pPpoPawiF6LPKvr8eRGaepZIPABbFYUIJUxVkEfJ6u1xxqHnymOJDJzFp9sIVhbGcIsJaeGuAyxHTEkt4c1cO00T8DPkzm1cMPtNXArvFvHyTi0z3WCrmuLXqixeItNe6pKih9PtZn8rTfYidbD/rPtshxUyUvzYDW0e98nPwmVmSF2T1oX8nLqqNQEDk8LbOuhl2TQBSe/8TqNk8rX+WUbhIwzA+vGUYxG8ER+603G/r+pgTqloDr4pI/4vzUo4QZi0sMMPiSzyZjNq4B+QrtMBeBqMmnsDJ63bVZV2c0E0EqF9H+CHcfGNbhwh87pCJmRCf4VLxwMmepniGunhMdcnzUSNFz6m//PJdsja7AD9JGoRIQas1AZuzDi5I4Ext2XyqGcN1LnNYgyxG6gP1zwfhVtSDLTu2LgrLV7gpvmPPClW2kwO65y2n8SrtK6qQfPPHyY9ZiQVCSZGjfkzpa095oaQ8y2l5gv69lO1Zvt6PIlon7WU5xxi/Gjgjpwv1Lhd4op5H8OUUc88y6hAjZc+3Y2gCGqXVA6N8B8ejqINdxWX3bQB4bwUnNyrZI1kqpLJRyMP7jt75JfoKPVdXemC8+MiZDjuFkPlGAWVoLcjRhqlsWPn8QYk508Mbjry7oEja2VTEHOX2vYfjrAdw1ER4Cmjj3JTuOtKIDXFJXylqucEw2JZFUWnXr3qilnscPf5D7R6L+8ZdQjHC6ha8aLF25LsbTPplK1Et+yR5ZiRIViCvhSlo7U3F39APzCKfDtd0+G17bx4WPNuKceY8B+GF4dTPag8kUn8roOWZK2RQ8rhJ+6BYg4x8dCJYCWjdVt41Mq7urnMGHZDrFjCutuqMh158VT5CT5wFhBa3UWbYS/jRY7HLHKP6ntyRepA8eOk+ZXPhC39oqRe+GblHxAql3QMvH6Yi/jmY5DyRm0KM2x9hGsc8gJTLGi5dIhod/icma5yowITKyrc7ULSizBVF5+1GIe83c+A9wrE/fjJYi71fzjyJgkURGOpUZY2Br+a4mn3lneoE4+e20Tk64kmOj1QByXqbqU0MRsp4IuXng9mbzmUwgrPbv9VKAPrSkudRm0g+gK+gFebQEQlglyJ1doFxirqzIMRov52Iu4zQXFxqHvSSrzmhaWw/QtCo/KP8k+m0hEwlFvmdmtLA5FoBkM+d9YVMoXoEv8xRG3ZoXj5Q1Uc45B8EtVvE1Z9YSZIMe8lcgTDU3+Y0D3q58y34jhiCSsjj4L+kbOgZTWF3RbnFWqKZrE57KF3krtC6/nEHyH3qQPJZiD0QIwAA==" alt=""><div><b>Rahul Verma</b><span>Lucknow, UP</span></div></div>
+      </div>
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"डिपॉज़िट पूरा रिफंड मिल गया काम पूरा होने के बाद। सिस्टम बिल्कुल ट्रांसपेरेंट है।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,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" alt=""><div><b>Sunita Devi</b><span>Patna, Bihar</span></div></div>
+      </div>
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"Plan 02 के साथ 80 पेज का काम आसानी से हो गया। डिलीवरी बिल्कुल फ्री थी।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,UklGRqYDAABXRUJQVlA4IJoDAABwFACdASpgAGAAPrlMoEsnJCMhrjYMYOAXCWMAzJnA5ZmdPLTHDWz2zjElJyI2A0WRU/XdEO2QwX8Cvuq+tmq9HJ0LztYZMsGmp07NqA+Krp+QDOB3wC6CsgCasWNsRu8wRN4IlbpyawkDJDiawevD4/mY72eIMt4pyxCKDcL94kjfNYR7vtBpN0kV7t0ytXj3Nsx4jW2qms1q4T7HCaTHqDKbi/bWVynnAb3gAP74VZDSa2NweJHtOP9zbgalkpAln9u9knXhTxdMUOsaRcroFHPSEarZxWJoBVXc/R6Je+PdMDYLCfWtf+6NtRVRQpUpO49hvZHXffwZVJNFyy+qTSuPbtdjFFD60cZAa/rC4kgndn8JPANKljwd/f8/Io3MZ8TwUhMnB3rtYzet3CwULCf3YzHMxePkcL1/Lc9SLv0WUPH112D1OwOEmE6MxHYfZpZtB+SoI1KbQwOPhLLCQsrQ5jWXyTWgm0MKqa0vZDfl1c4sTx98vpju2esPstMyQDLk72tgWXptP9fxzrOwyOWB528hJcQtP/TntxcHnOBYNmsC5ZFC05G41Ccf/CHgwNzBjmbDEXPjTyB2mHOnn/qwD14wvYljgi1s8fSsTPUbJcH5dUq6/5YfiAPDTrV6VRnHdlWgDITMRMqqEgFzx0hhtU28wew6N5AmSstDtqYBag2GMJD0BwCx3lMs9/uA0JytFYTpnKs0IXQFhs6wK+zH8sC9ezk2NydD4MTwxdo7STt3uJGigepflXvdsAA4g1FeTepYhSazDSnEexAaodKyPQn8r35RqnCIzIbSEx4FlwJ/90jTaCKIPy0ZAQuzAxWdl74HdcaDQ83cj6j8/x3BD6dX6LqtJBikaHGXpLGiEREhGzrEYOAPF6Auj8Gyax+nPM+wmx/EllBevILoFMgUNsNXwlpHg5eeKxrjND1qEHcL3vctTHcS98Y/b4aTUPi7EVxhXNCnGCwdeStnpgxlxWEq1k9fJcQPzV8VbfVVTypQvzZFVSiEfNmQclyynKoGCiiObEgdw/vm8Ar5aR+JPKRQRp5pg/nvLWCGn1iRYOdiiYyg0xGvpnkVHSCwOvUg4g9SiVTEhYgZxvImiQwVJQvvPLtOwZUo+72S0wq+grpeRcKGW5+csBTrx67aoiyJrJcGft6Favwq8tBJnq+azi3Z5i0SSqjdUWpkstilderXuUvLheVbLMBfLRWLQcb4JzJJ6wAA" alt=""><div><b>Amit Kumar</b><span>Delhi</span></div></div>
+      </div>
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"पेमेंट 24 घंटे के साइकिल में मिलता है, जैसा कहा गया था वैसा ही हुआ। भरोसेमंद प्लेटफॉर्म।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,UklGRqwEAABXRUJQVlA4IKAEAABwGwCdASpgAGAAPrlOnkqnJCKhrjYMyOAXCWUAuZBGjkJJsueoGxycLxSdQ1rtOAu+KpMz6AocR4ea5lFYBicKNxP3Cj6pU671bHPLIvV53cA6KI/NI9LQb2UbGfr6AjptIFz3/y86k2Qsn96TQb01lcgXZl9ZZBJvde0LZqHT+xALKuzTLlM39Z99kR5ZUhu+opVPr4VAVRfyroM7GwxZHYmCNB7yalD40KGAU7hKlMPjwvMnsupEDfVuHyEF24gyJ39pKh2oKN5xlTpB9rCFHEWt9VGq/dkgPComfwSeF/4nlTQA/vxBsaEm71TTcIqOoh7v1uNHG6Zfd6Da2X8Q5GSrGtyrvu+4SYcSsWJwmqsFMN0PdH7IiPiVgTZXleROJ8fjWCaufgPiDn8Edtffo9g2zyMAhw6n7b6BEybfAHHD/l1QCLLIsl4kf3TyU12//zSei9ndJHmG+VqCCwf7OVhL4ooM8dq2lmlPjdr4pV3oqCbyBUwLAeBfNgcv5NmbqLG5Ts4YurMhTa3qwaPzBTZ0229O3HLpmsNq1cVLaFJHnxrZnGm3k1fqPRqLFrCQDMoTrMtYMAft/5Bb3NbVvQA4q3cad5y2VI132U0kcURJPJjVQpTzegGHOYAeDu5hshoOUW1W/Kq1hAuLtJbPNvE+uJIqwcr7ki9QYNbkSMP+1t9UqWgc92XmpLscb4gqF5oM6uUNLYiT4Ffl0bl0zpzwce2REq+67lDiNaKhcDrTpm+FPmhLdC/55jxXLpes2qzGtpqRbCBM2CXv5VakN68beBxsj63OS4b6DvgKJ/qtniruqz79nvF3LCu4gQh/y5aUTT86Ba53Ph7IgzSte5sXn8OsoYJv807VRxsgFJoPa3f57Ru0Y7qj5XXuHzHxVpZcxPaY/HVNcGk9ZR4ZA997eUf46fxH/KuqjaMZU3ss6XuzIV8zWPXXcfTz4uqqWRZ2hdjHG/ihIK/owwA0r1POrK3zBu3/NrryhxBJ8hCoNSmk4Ik6Xp3dtc+Cl9lCTP2In84mPj2Q1TfLzL0RoXeZtajpsACVJfOkmNDyxk7Pv9V0+FmlqeW/Eneb7F9y4LCYd4M2wlDK+48xxo2aHVeFi9ibbBYxzX0vPrYl/wp6U6FB+E/dD6tvrx6hbK9NsprEB3qLF30PiU4X6PMd9vJ9d3gfbTMHvrznMPnNPnQv8VqG0q1/oTrFnWkOVqolIznq/Vw5MTOLa5uvWQ0atL9hl4f4WbSXqDbXEv7bDS7NgwqHw2FRUTg10hoD51vUxzfuRScBqOxCBy5dOms8SO+s027iJ2A6XWju4C11xcw9KuQQy8KaPainY+xr4jXkeE9n6bovtZ3iCRniDUUBVevgAcgs3s7Lk6r1SBU65RurzxjJUFKd+cIWQePyoJeUa0H40zp2r72c9HHngyFgQJuoWMjYOG038uo4CiS/CVWsMATatIC3ovYnZCYi1ivXyWShIei8bcYa0gQc1hUCJGlkAk7DrP/oVrzgZB5zuo7izteq/uUleRO2u8aM/6uZijOrGIVhZIGHk1ZZeg4oEyf3BRytx3HLd3B4BgAAAA==" alt=""><div><b>Neha Gupta</b><span>Indore, MP</span></div></div>
+      </div>
+      <div class="vb-t-card vb-reveal">
+        <div class="vb-t-stars">★★★★★</div>
+        <p>"Plan 03 ने मेरे लिए सबसे अच्छा रहा। 120 पेज, एक महीने का समय और पूरा सपोर्ट।"</p>
+        <div class="vb-t-who"><img src="data:image/webp;base64,UklGRgYFAABXRUJQVlA4IPoEAADwGwCdASpgAGAAPrlQn0snJKKhrjQMyOAXCWQAxJRazUykLs3aws35ze7MwHh+3wUnX8QjA5NWkgpX717gN5DdJmRSdbc8f9iQ6K6ul+ZHoiwuWdHU9DmDp1BnqgLrXZ32sBIVGiH9BYQSM33PJZkKHpa/HTtxBn3m/fcsSYogOt6UG+PRyiQfyCY6Z1q+sW0L2pNG/lo7IWQDcRsyC2ZVy1Gn7WPkeGAfrTpZ17d4tx0xuVxRA9bqeP3sPcVvJCR3OdJcOwc/fHofocwgqzJASLhP3/IgoB5QrPsYkwDiTKaeBQfOxF/oAP7Tmq272P/RDWUWe6/0W+U2vS9yk60ExFeuE9QSY0HK9969HeycAvU8D53LjxPLq+JpKkbDa8j/UJdXbmO/crmDhqsptWkQ5DqLxd1aWCvBR5Ril3G9/HofWuk7mVbC2GmF76xFldC/DpRhzJLnjRkRAEL1PM9nJ4kd6mq902HGFEFQEzI0GMUQl0mibrlzJCqiqs9hb7XVxw2pVk0Fjm7dF4WtYwPCDxpMjTKy9B/FKjGo/O25NEbIBb5bF48Ti3oRNqgLNyoMO1CZ1JUJZxSzTFDO4xZfy332QU9h4uEVKzNA3gFulUhBzzrtQfhfFni71Tg/Bh6erBhrmwoBgNjM5PemSQA/RDQm1B2x9kcw3d7TjK+jHva1pmBzEL4pmE4z+1V0Zyq4Ze+WrBxLwE/swIS/IVlAmfVkVYf/nxlT6+VobH7qLNTnV9g0NdW67s1Jkxp0ap3PoviXG0aRrKhZPR1Zcb5zuHqq+3zxxQXVeaHZYBCzoQmSLIEAKpcJWMp7232V0gYm534tLQwfpXrOw7ai0fSSmz6axbwOEl7wdBRn5NiUUrcUOC34DRT576pw0838AfvvnbCAJL4Fl6ObfMXVETciWD7b3BWEUV+FZPxEBFlifegHukZTubzXfubSmexwEfUM/BdmQeLn6yqgRrbAhIr05gfl9E8J3uDvUSl96Q2/XYjitfJw223Gg3/IlT/vUgDrXNFMK+6lMd304RozfaVsrRHMwq6QjujrEwi0Wq3tV8z0f3i7jZsXogGu0KLxoYK4EIm+Yi6Jp5qFLzbzR6+3fqiy0k6UefeFTXsFTcuesHatgqzHi1zP4uS1294Ka9zq8FYoCIPNBDEInPqOAxIZGaU0HIemusxKgpNFYjzJKOgZnhyMH9rzGLxXy3Y1c3lkmRkntKcyB0KDDk82Al1Q68KWEEm9oNelnLAYdgPGohh2eyubOWhsx8XHHjyS2ls4JMXFa1irtG6+z1bISIKKLx88PZXA76ROXlfjszkVYSor1zHIvZmUgXOqkCL9HGAyEud9gIvMV4ier8xWAYAQgTLYWJ5GCEm5hCxX1ucSikLYLsR+aETa+As7wcFMehP3y87Goj+Y1SU+CNSY1em3PFHaMVEC9SNdO8yIKzV+h31Tt89E5gqONz2tcDzmVxrMO7EdKvVxe2T5BihT/nqDJg/jxJ6/8s5sXdGx7WWmksfpzyPYpD/XjYIF++lO4xyV6QgXSArKDmxAPNHMKsAnwyT/G8JXRZLVdPsIsyclaEfJ4Ytf/ylNTkYIQpefHlYFV2v36OromCoALACrNndEO4cqZ56QdEX1JBB2lihaJ2N3dBuUWL4vWfg3dbbk9/KTFcguuT/Mdny0SXKIF9IRJjyqJhbxrmwAAA==" alt=""><div><b>Vikram Singh</b><span>Chandigarh</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="vb-section">
+  <div class="vb-wrap">
+    <div class="vb-cta vb-reveal">
+      <div class="vb-blob vb-blob-2" style="opacity:.35"></div>
+      <h2>Ready to Start <span class="vb-grad-text">Earning From Home?</span></h2>
+      <p>Join thousands of writers on the Govt. of India verified platform. Confirm your plan on Telegram and receive your first advance within 30 minutes.</p>
+      <a class="vb-btn" href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">✈ Join Our Telegram Channel</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="vb-footer">
+  <div class="vb-wrap">
+    <div class="vb-footer-brand">
+      <span class="vb-logo-small" role="img" aria-label="Vishav Book logo"></span>
+      <div><b>Vishav Book</b><br><small>Govt. of India Verified Platform · New Delhi, India</small></div>
+    </div>
+    <div class="vb-footer-links">
+      <a href="https://t.me/+loSt87OaFBMwOGVl" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:support@vishavbook.in">support@vishavbook.in</a>
+    </div>
+    <small>© 2026 Vishav Book. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items=document.querySelectorAll('.vb-page .vb-reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('vb-in');io.unobserve(e.target);}
+      });
+    },{threshold:0.12});
+    items.forEach(function(el){io.observe(el);});
+  }else{
+    items.forEach(function(el){el.classList.add('vb-in');});
+  }
+  document.querySelectorAll('.vb-page .vb-btn').forEach(function(b){
+    b.addEventListener('mousemove',function(ev){
+      var r=b.getBoundingClientRect();
+      var x=(ev.clientX-r.left)/r.width-.5, y=(ev.clientY-r.top)/r.height-.5;
+      b.style.transform='perspective(500px) rotateY('+(x*14).toFixed(1)+'deg) rotateX('+(-y*14).toFixed(1)+'deg) translateY(-2px)';
+    });
+    b.addEventListener('mouseleave',function(){b.style.transform='';});
+  });
+})();
+</script>
+
+</div>
